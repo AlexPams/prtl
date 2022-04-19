@@ -4,7 +4,7 @@ import applications
 from flask import request
 from flask import url_for
 import json
-from setting import SINGS, FIRST_ROW, SECOND_ROW, THIRD_ROW, LAST_ROW
+from setting import  FIRST_ROW, SECOND_ROW, THIRD_ROW, FOURTH_ROW, LAST_ROW
 
 app = Flask('app')
 
@@ -23,7 +23,7 @@ def generate():
 
 @app.route('/calculator')
 def calculator():
-      return render_template("calculator.html", sings=SINGS, first_row=FIRST_ROW,
-                           second_row=SECOND_ROW, third_row=THIRD_ROW, last_row=LAST_ROW)
+      return render_template("calculator.html",  first_row=FIRST_ROW,
+                           second_row=SECOND_ROW, third_row=THIRD_ROW, fourth_row=FOURTH_ROW, last_row = LAST_ROW)
 
 app.run(host='0.0.0.0', port=8080, debug=True)

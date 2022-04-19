@@ -16,20 +16,25 @@
                 <input id="out" type="text" value="">
                 <div class="buttons">
                     <div class="left_content buttons_child">
+                      <div class="row">
+                             {% for i in first_row %}
+                                <button class="sing" value="{{ i }}">{{ i }}</button>
+                            {% endfor %}
+                      </div>
                         <div class="row">
-                            {% for i in first_row %}
+                            {% for i in second_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
                            <button class="sing" value="/">/</button>
                         </div>
                         <div class="row">
-                            {% for i in second_row %}
+                            {% for i in third_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
                            <button class="sing" value="*">*</button>
                         </div>
                         <div class="row">
-                            {% for i in third_row %}
+                            {% for i in fourth_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
                            <button class="sing" value="-">-</button>
