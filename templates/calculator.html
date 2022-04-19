@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.4/math.js"></script>
     <link rel="stylesheet" href={{ url_for("static", filename="styles/calculator.css") }}>
    <title>Calculator</title>
 </head>
@@ -15,33 +16,30 @@
                 <input id="out" type="text" value="">
                 <div class="buttons">
                     <div class="left_content buttons_child">
-                        <div class="digits">
+                        <div class="row">
                             {% for i in first_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
+                           <button class="sing" value="/">/</button>
                         </div>
-                        <div class="digits">
+                        <div class="row">
                             {% for i in second_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
+                           <button class="sing" value="*">*</button>
                         </div>
-                        <div class="digits">
+                        <div class="row">
                             {% for i in third_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
+                           <button class="sing" value="-">-</button>
                         </div>
-                        <div class="digits">
+                        <div class="row">
                             {% for i in last_row %}
                                 <button class="digit" value="{{ i }}">{{ i }}</button>
                             {% endfor %}
                             <button class="sing" type="submit" id="equal" value="=">=</button>
-                        </div>
-                    </div>
-                    <div class="right_content, buttons_child">
-                        <div class="sings">
-                            {% for i in sings %}
-                                <button class="sing" value="{{ i }}">{{ i }}</button>
-                            {% endfor %}
+                           <button class="sing" value="+">+</button>
                         </div>
                     </div>
                 </div>

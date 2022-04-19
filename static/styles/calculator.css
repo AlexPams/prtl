@@ -35,9 +35,8 @@ body {
     border: 1px solid #F7F7F7;
     border-radius: 10px;
     outline: none;
-    direction: rtl;
     margin-bottom: 15px;
-    padding: 20px 15px 20px 0px;
+    padding: 20px 0px 20px 15px;
     background-color: white;
     font-size: 30px;
 
@@ -51,7 +50,8 @@ body {
 }
 
 
-.digits {
+
+.row {
     display: flex;
     align-items: center;
 
@@ -60,10 +60,10 @@ body {
 .sings {
     display: flex;
     flex-direction: column;
-    /*width:30%;*/
 }
 
 .digit {
+  cursor:pointer;
     background-color: #F1F3F4;
     border: none;
     outline: none;
@@ -73,6 +73,7 @@ body {
 }
 
 .sing {
+  cursor:pointer;
     background-color: #DADCE0;
     border: none;
     outline: none;
@@ -88,6 +89,8 @@ body {
     font-weight: bolder;
     padding: 7px 50px 7px 50px;
 }
+
+
 
 
 
